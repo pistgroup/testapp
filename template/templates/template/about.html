@@ -1,0 +1,9 @@
+{% extends 'template/base.html' %}
+
+{% block content%}
+<form action="" method="POST">
+    {{form.as_p}}
+    <button type="submit">送信</button>
+    {% csrf_token %}<!--postの場合はセキュリティ対策で必ずつける-->
+</form>
+{% endblock %}
